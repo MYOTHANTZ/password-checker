@@ -1,0 +1,186 @@
+body {
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .container {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #00ff88;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00ff88;
+    margin-bottom: 1.5rem;
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  }
+  
+  .password-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centers inline elements if needed */
+  }
+  
+  /* Center the password input */
+  #password {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #333333;
+    border: 2px solid #444444;
+    border-radius: 6px;
+    color: #00ff88;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+  }
+  
+  #password:focus {
+    outline: none;
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  }
+  
+  /* Center the strength meter by applying same width and auto margins */
+  .strength-meter {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    height: 8px;
+    background-color: #333333;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .strength-bar {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px currentColor;
+  }
+  
+  .weak { background-color: #ff1a1a; width: 25%; }
+  .medium { background-color: #ffd633; width: 50%; }
+  .strong { background-color: #00ff88; width: 75%; }
+  .very-strong { background-color: #00ff88; width: 100%; }
+  
+  .feedback {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .feedback li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #cccccc;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .feedback li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .feedback li span {
+    margin-right: 10px;
+    font-size: 1.3rem;
+  }
+  
+  .valid { color: #00ff88; }
+  .invalid { color: #ff1a1a; }
+  
+  ::placeholder {
+    color: #666666;
+    letter-spacing: 1px;
+  }
+  
+  .strength-text {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 1rem;
+    }
+    
+    #password {
+      width: 90%;
+      padding: 12px;
+      font-size: 1em;
+    }
+    
+    .strength-meter {
+      width: 90%;
+      margin: 12px auto;
+    }
+    
+    .feedback li {
+      font-size: 0.9rem;
+      padding: 6px;
+    }
+    
+    .strength-text {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.6em;
+    }
+    
+    #password {
+      width: 90%;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+    
+    .strength-meter {
+      width: 90%;
+      margin: 10px auto;
+      height: 6px;
+    }
+    
+    .feedback li {
+      font-size: 0.85rem;
+      padding: 5px;
+    }
+    
+    .strength-text {
+      font-size: 0.9em;
+    }
+  }
+  
